@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.UtilityCheckController"
+      alignment="CENTER" spacing="15"
+      prefWidth="600" prefHeight="450"
+      style="-fx-background-color: #f0f4f8;">
+
+    <Label text="Utility Check"
+           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Label text="Select utility to check:" style="-fx-font-size: 16px;"/>
+
+    <ChoiceBox fx:id="utilityType">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Electricity"/>
+                <String fx:value="Water Supply"/>
+                <String fx:value="Internet"/>
+                <String fx:value="CCTV Surveillance"/>
+                <String fx:value="Park Gate Security System"/>
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+
+    <Button text="Run Check" fx:id="btnRunCheck" prefWidth="200" prefHeight="35"/>
+
+    <TextArea fx:id="outputArea" prefHeight="180" prefWidth="450"/>
+
+</VBox>

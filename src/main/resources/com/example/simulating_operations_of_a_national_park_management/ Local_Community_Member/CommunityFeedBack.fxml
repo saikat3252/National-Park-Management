@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.simulating_operations_of_a_national_park_management.Local_Community_Member.CommunityFeedBackController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: #f5f5f5;">
+
+    <!-- Header -->
+    <VBox layoutX="0" layoutY="0" prefWidth="600" prefHeight="70"
+          style="-fx-background-color: #3F51B5;">
+        <Label text="Community Feedback Form"
+               style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"
+               alignment="CENTER"
+               prefHeight="70" prefWidth="600">
+            <padding>
+                <Insets top="20" />
+            </padding>
+        </Label>
+    </VBox>
+
+    <!-- Main Form -->
+    <VBox layoutX="50" layoutY="90" spacing="20" prefWidth="500">
+
+        <!-- Feedback Type -->
+        <VBox spacing="5">
+            <Label text="Feedback Type:" style="-fx-font-weight: bold;" />
+            <ComboBox fx:id="typeComboBox" prefWidth="500" />
+        </VBox>
+
+        <!-- Rating -->
+        <VBox spacing="5">
+            <Label text="Rating (1-5):" style="-fx-font-weight: bold;" />
+            <ComboBox fx:id="ratingComboBox" prefWidth="500">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1 - Very Poor" />
+                        <String fx:value="2 - Poor" />
+                        <String fx:value="3 - Average" />
+                        <String fx:value="4 - Good" />
+                        <String fx:value="5 - Excellent" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </VBox>
+
+        <!-- Comments -->
+        <VBox spacing="5">
+            <Label text="Comments:" style="-fx-font-weight: bold;" />
+            <TextArea fx:id="commentsTextArea"
+                      promptText="Enter your feedback here..."
+                      prefHeight="100" prefWidth="500" />
+        </VBox>
+
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="submitButton" text="Submit Feedback"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white;"
+                    prefWidth="150" />
+
+            <Button fx:id="clearButton" text="Clear"
+                    style="-fx-background-color: #9E9E9E; -fx-text-fill: white;"
+                    prefWidth="100" />
+
+            <Button fx:id="backButton" text="Back to Dashboard"
+                    prefWidth="150" />
+        </HBox>
+
+    </VBox>
+
+
+    <Label layoutX="0" layoutY="370" prefWidth="600" prefHeight="30"
+           text="Thank you for helping us improve our park!"
+           alignment="CENTER"
+           style="-fx-background-color: #E8EAF6; -fx-text-fill: #3F51B5;" />
+
+</AnchorPane>

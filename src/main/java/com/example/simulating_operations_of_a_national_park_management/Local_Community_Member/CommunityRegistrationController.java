@@ -1,0 +1,4 @@
+package com.example.simulating_operations_of_a_national_park_management.Local_Community_Member;
+
+public class CommunityRegistrationController {
+}
