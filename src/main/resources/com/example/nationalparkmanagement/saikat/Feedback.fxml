@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="#3783ee" layoutX="240.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedback">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <HBox layoutX="9.0" layoutY="7.0" prefHeight="100.0" prefWidth="585.0">
+         <children>
+            <Button mnemonicParsing="false" text="comment" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="edit" />
+            <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" text="delete" />
+         </children>
+      </HBox>
+      <TextArea layoutX="9.0" layoutY="147.0" prefHeight="200.0" prefWidth="411.0" />
+      <Button layoutX="14.0" layoutY="354.0" mnemonicParsing="false" text="send" />
+      <Text layoutX="9.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating" />
+   </children>
+</AnchorPane>
