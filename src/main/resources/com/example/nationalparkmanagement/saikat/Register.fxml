@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.RegController">
+   <children>
+      <Text fx:id="registerNameLabel" layoutX="82.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Number:" />
+      <Text fx:id="visiterNameLabel" layoutX="93.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visiter Name:" />
+      <TextField fx:id="registerNumberField" layoutX="186.0" layoutY="82.0">
+         <effect>
+            <Bloom threshold="0.95" />
+         </effect>
+      </TextField>
+      <TextField fx:id="visiterNameField" layoutX="173.0" layoutY="118.0">
+         <effect>
+            <Bloom threshold="0.95" />
+         </effect>
+      </TextField>
+      <Text fx:id="TicketNumberLabel" layoutX="373.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket Number:" />
+      <Text fx:id="tourScheduleLabel" layoutX="373.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tour schedule:" />
+      <TextField fx:id="TicketNumberField" layoutX="461.0" layoutY="82.0" prefHeight="25.0" prefWidth="110.0">
+         <effect>
+            <Bloom threshold="0.95" />
+         </effect>
+      </TextField>
+      <Spinner fx:id="timeSpinner" layoutX="454.0" layoutY="118.0" prefHeight="25.0" prefWidth="110.0" />
+      <Text layoutX="289.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="registerButton" layoutX="93.0" layoutY="175.0" mnemonicParsing="false" text="Register" />
+      <TextArea fx:id="registerArea" layoutX="86.0" layoutY="215.0" prefHeight="92.0" prefWidth="316.0">
+         <effect>
+            <Bloom threshold="0.95" />
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>
