@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.TrackWildlifeSightingsViewController"
+            prefHeight="480.0" prefWidth="650.0">
+
+    <VBox spacing="15" padding="20"
+          AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+
+        <Label text="Track Wildlife Sightings"
+               style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="15" vgap="15">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30"/>
+                <ColumnConstraints percentWidth="70"/>
+            </columnConstraints>
+
+            <Label text="Species:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="speciesCombo" prefWidth="200"
+                      GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Location:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="locationCombo" prefWidth="200"
+                      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker"
+                        GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text=
+

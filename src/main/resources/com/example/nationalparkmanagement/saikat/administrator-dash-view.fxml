@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="553.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nationalparkmanagement.saikat.AdministratorDashViewController">
+   <children>
+      <Button layoutX="55.0" layoutY="31.0" mnemonicParsing="false" onAction="#Registernewvisitorstothepark" prefHeight="26.0" prefWidth="303.0" text="Register new visitors to the park" />
+      <Button layoutX="55.0" layoutY="107.0" mnemonicParsing="false" onAction="#Assignforestrangerstodifferentparkzones" prefHeight="26.0" prefWidth="303.0" text="Assign forest rangers to different park zones" />
+      <Button layoutX="55.0" layoutY="187.0" mnemonicParsing="false" onAction="#Monitordailyvisitorstatistics" prefHeight="26.0" prefWidth="303.0" text="Monitor daily visitor statistics" />
+      <Button layoutX="55.0" layoutY="277.0" mnemonicParsing="false" onAction="#Manageparkticketpricing" prefHeight="26.0" prefWidth="303.0" text="Manage park ticket pricing" />
+      <Button layoutX="450.0" layoutY="277.0" mnemonicParsing="false" onAction="#Generatemonthlyfinancialsummary" prefHeight="26.0" prefWidth="303.0" text="Generate monthly financial summary" />
+      <Button layoutX="450.0" layoutY="187.0" mnemonicParsing="false" onAction="#Handlewildlifehealthmonitoringreports" prefHeight="26.0" prefWidth="303.0" text="Handle wildlife health monitoring reports" />
+      <Button layoutX="450.0" layoutY="107.0" mnemonicParsing="false" onAction="#Managemaintenanceschedules" prefHeight="26.0" prefWidth="303.0" text="Manage maintenance schedules" />
+      <Button layoutX="450.0" layoutY="31.0" mnemonicParsing="false" onAction="#Reviewrangerperformancereport" prefHeight="26.0" prefWidth="303.0" text="Review ranger performance report" />
+   </children>
+</AnchorPane>

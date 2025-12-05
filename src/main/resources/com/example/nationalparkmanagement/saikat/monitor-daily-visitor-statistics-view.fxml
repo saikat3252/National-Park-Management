@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.MonitorDailyVisitorStatisticsViewController"
+            prefHeight="450.0" prefWidth="650.0">
+
+    <children>
+        <VBox spacing="12" layoutX="40" layoutY="25" prefWidth="580">
+            <children>
+
+                <Label text="Daily Visitor Statistics"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold"/>
+
+                <Button text="View Daily Report"
+                        onAction="#handleViewReport"
+                        style="-fx-background-color: #0d6efd; -fx-text-fill: white; -fx-padding: 8 15"/>
+
+                <Separator/>
+
+                <HBox spacing="10">
+                    <Label text="Total Visitors:" prefWidth="150"/>
+                    <Label fx:id="totalVisitorsLabel" text="0"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Peak Hour:" prefWidth="150"/>
+                    <Label fx:id="peakHourLabel" text="--"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Total Ticket Sales:" prefWidth="150"/>
+                    <Label fx:id="salesLabel" text="0"/>
+                </HBox>
+
+                <Separator/>
+
+                <Label text="Visitor Entries: " style="-fx-font-size: 16; -fx-font-weight: bold"/>
+
+                <ListView fx:id="visitorList" prefHeight="200"/>
+
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

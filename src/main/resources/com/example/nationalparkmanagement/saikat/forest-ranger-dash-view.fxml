@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="563.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nationalparkmanagement.saikat.ForestRangerViewController">
+   <children>
+      <Button layoutX="586.0" layoutY="247.0" mnemonicParsing="false" onAction="#Updatewildlifefeedingrecords" prefHeight="26.0" prefWidth="240.0" text="Update wildlife feeding records" />
+      <Button layoutX="582.0" layoutY="145.0" mnemonicParsing="false" onAction="#Checkweatherandfirealerts" prefHeight="26.0" prefWidth="240.0" text="Check weather and fire alerts" />
+      <Button layoutX="582.0" layoutY="43.0" mnemonicParsing="false" onAction="#SubmitdailyreporttoParkAdministrator" prefHeight="26.0" prefWidth="240.0" text="Submit daily report to Park Administrator" />
+      <Button layoutX="84.0" layoutY="43.0" mnemonicParsing="false" onAction="#Recorddailypatrolactivities" prefHeight="26.0" prefWidth="265.0" text="Record daily patrol activities" />
+      <Button layoutX="83.0" layoutY="145.0" mnemonicParsing="false" onAction="#Reportillegalactivitiesorincidents" prefHeight="26.0" prefWidth="266.0" text="Report illegal activities or incidents" />
+      <Button layoutX="83.0" layoutY="246.0" mnemonicParsing="false" onAction="#Trackwildlifesightings" prefHeight="26.0" prefWidth="266.0" text="Track wildlife sightings" />
+      <Button layoutX="83.0" layoutY="359.0" mnemonicParsing="false" onAction="#Checkassignedpatrolroutes" prefHeight="26.0" prefWidth="266.0" text="Check assigned patrol routes" />
+      <Button layoutX="586.0" layoutY="359.0" mnemonicParsing="false" onAction="#Requestequipmentorsupplies" prefHeight="26.0" prefWidth="240.0" text="Request equipment or supplies" />
+   </children>
+</AnchorPane>

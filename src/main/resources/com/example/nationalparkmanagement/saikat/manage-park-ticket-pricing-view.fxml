@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.ManageParkTicketPricingViewController"
+            prefHeight="420.0" prefWidth="620.0">
+
+    <children>
+        <VBox spacing="12" layoutX="40" layoutY="30" prefWidth="550">
+            <children>
+
+                <Label text="Manage Ticket Pricing"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold"/>
+
+                <HBox spacing="10">
+                    <Label text="Ticket Price (BDT):" prefWidth="150"/>
+                    <TextField fx:id="priceField" promptText="Enter new ticket price"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Discount (BDT):" prefWidth="150"/>
+                    <TextField fx:id="discountField" promptText="Enter discount (optional)"/>
+                </HBox>
+
+                <Button text="Update Pricing"
+                        onAction="#handleUpdatePricing"
+                        style="-fx-background-color: #198754; -fx-text-fill: white; -fx-padding: 8 15"/>
+
+                <Label fx:id="statusLabel" style="-fx-font-size: 14px;"/>
+
+                <Separator/>
+
+                <Label text="Current Pricing:" style="-fx-font-size: 16; -fx-font-weight: bold"/>
+
+                <Label fx:id="currentPriceLabel" text="Ticket Price: --"/>
+                <Label fx:id="currentDiscountLabel" text="Discount: --"/>
+
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

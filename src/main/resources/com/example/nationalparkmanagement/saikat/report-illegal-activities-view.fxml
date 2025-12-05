@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.ReportIllegalActivitiesViewController"
+            prefHeight="450.0" prefWidth="650.0">
+
+    <VBox spacing="15" padding="20"
+          AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+
+        <Label text="Report Illegal Activities"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="15" vgap="12">
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30"/>
+                <ColumnConstraints percentWidth="70"/>
+            </columnConstraints>
+
+            <Label text="Ranger Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="rangerNameField"
+                       promptText="Enter ranger name"
+                       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Activity Type:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="activityTypeCombo"
+                      prefWidth="200"
+                      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Location:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="locationCombo"
+                      prefWidth="200"
+                      GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker"
+                        GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Description:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionArea"
+                      prefHeight="120"
+                      promptText="Describe what happened"
+                      GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        </GridPane>
+
+        <Button text="Submit Illegal Activity Report"
+                prefWidth="220"
+                onAction="#onSubmitReport"/>
+
+    </VBox>
+
+</AnchorPane>
+

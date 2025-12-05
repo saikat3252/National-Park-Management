@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.RecordDailyPatrolActivitiesViewController"
+            prefHeight="450.0" prefWidth="650.0">
+
+    <VBox spacing="15"
+          AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="10">
+
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+
+        <Label text="Record Daily Patrol Activities"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="15" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30"/>
+                <ColumnConstraints percentWidth="70"/>
+            </columnConstraints>
+
+            <Label text="Date:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Patrol Area:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="areaComboBox" prefWidth="200"
+                      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Patrol Hours:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="patrolHoursField"
+                       promptText="Enter hours (e.g., 4)"
+                       GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Activities Performed:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextArea fx:id="activitiesArea"
+                      prefHeight="100"
+                      GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Incidents (Optional):" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextArea fx:id="incidentArea"
+                      prefHeight="80"
+                      promptText="Write if any incidents occurred"
+                      GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="Save Patrol Record"
+                prefWidth="200"
+                onAction="#onSavePatrolRecord"/>
+    </VBox>
+
+</AnchorPane>

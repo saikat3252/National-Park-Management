@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.SubmitDailyReportViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <VBox spacing="15" layoutX="30" layoutY="20" prefWidth="540">
+            <children>
+
+                <Label text="Submit Daily Report"
+                       style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Ranger ID:"/>
+                        <TextField fx:id="rangerIdField" promptText="Enter Ranger ID" prefWidth="200"/>
+                    </children>
+                </HBox>
+
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Date:"/>
+                        <DatePicker fx:id="reportDatePicker"/>
+                    </children>
+                </HBox>
+
+                <Label text="Report Details:"/>
+                <TextArea fx:id="reportDetailsArea" promptText="Write today's report..." prefHeight="150"/>
+
+                <Button text="Submit Report" onAction="#onSubmitReport"
+                        style="-fx-background-color: #2a8dd2; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            </children>
+        </VBox>
+
+    </children>
+
+</AnchorPane>
+

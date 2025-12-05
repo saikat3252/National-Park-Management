@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.RegisterVisitorViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <VBox spacing="10" layoutX="50" layoutY="30" prefWidth="500">
+            <children>
+
+                <Label text="Register New Visitor" style="-fx-font-size: 18px; -fx-font-weight: bold"/>
+
+                <HBox spacing="10">
+                    <Label text="Name:" prefWidth="120"/>
+                    <TextField fx:id="nameField" promptText="Enter visitor name" prefWidth="300"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Age:" prefWidth="120"/>
+                    <TextField fx:id="ageField" promptText="Enter visitor age" prefWidth="300"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Contact:" prefWidth="120"/>
+                    <TextField fx:id="contactField" promptText="Enter contact number" prefWidth="300"/>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Visitor UID:" prefWidth="120"/>
+                    <TextField fx:id="uidField" promptText="Unique ID" prefWidth="300"/>
+                </HBox>
+
+                <Button text="Register Visitor" onAction="#handleRegisterVisitor"
+                        style="-fx-background-color: darkgreen; -fx-text-fill: white; -fx-padding: 8 15"/>
+
+                <Label fx:id="statusLabel" textFill="blue" style="-fx-font-size: 14px"/>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

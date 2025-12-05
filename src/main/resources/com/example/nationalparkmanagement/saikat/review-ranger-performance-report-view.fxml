@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.nationalparkmanagement.saikat.ReviewRangerPerformanceReportViewController"
+            prefHeight="450.0" prefWidth="650.0">
+
+    <VBox spacing="15" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Review Ranger Performance Report" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <HBox spacing="10">
+            <Label text="Select Ranger:"/>
+            <ComboBox fx:id="rangerComboBox" prefWidth="200"/>
+            <Button text="Load Report" onAction="#onLoadReport"/>
+        </HBox>
+
+        <Separator/>
+
+        <GridPane hgap="15" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="35"/>
+                <ColumnConstraints percentWidth="65"/>
+            </columnConstraints>
+
+            <Label text="Ranger Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label fx:id="lblName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Total Patrol Hours:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label fx:id="lblPatrolHours" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Tasks Completed:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label fx:id="lblTasksCompleted" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Incidents Handled:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Label fx:id="lblIncidentsHandled" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Performance Rating:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <Label fx:id="lblRating" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Manager Remarks:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextArea fx:id="remarksArea" GridPane.rowIndex="5" GridPane.columnIndex="1" prefHeight="100"/>
+        </GridPane>
+
+        <Button text="Save Remarks" prefWidth="150" onAction="#onSaveRemarks"/>
+    </VBox>
+
+</AnchorPane>
+
+
