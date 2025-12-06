@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="616.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_a_national_park_management.Local_Community_Member.SupportRequestController">
+
+    <Label layoutX="20" layoutY="20" text="Community Support Request" />
+
+    <Label layoutX="20" layoutY="60" text="Request community development support" />
+
+    <Label layoutX="20" layoutY="100" text="Project Title" />
+    <TextField fx:id="ProjectTitleTextField" layoutX="149.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" />
+
+    <Label layoutX="20" layoutY="140" text="Project Type" />
+    <ComboBox fx:id="ProjectTypeComboBox" layoutX="150" layoutY="135" prefWidth="200" />
+
+    <Label layoutX="20" layoutY="180" text="Description" />
+    <TextArea fx:id="DescriptionTextArea" layoutX="150" layoutY="175" prefHeight="95.0" prefWidth="200.0" />
+
+    <Label layoutX="20" layoutY="290" text="Budget" />
+    <TextField fx:id="BudgetTextField" layoutX="150" layoutY="285" prefWidth="200" />
+
+    <Label layoutX="20" layoutY="330" text="Priority" />
+    <ComboBox fx:id="PriorityComboBox" layoutX="150" layoutY="325" prefWidth="200" />
+
+    <Button layoutX="150" layoutY="370" onAction="#SubmitRequestOnActionButton" prefWidth="120" text="Submit Request" />
+    <Button layoutX="280" layoutY="370" onAction="#CancelRequestOnActionButton" prefWidth="80" text="Cancel" />
+
+    <TableView fx:id="RequestsTableView" layoutX="20" layoutY="420" prefHeight="150" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="RequestIDTablecolumn" prefWidth="100" text="Request ID" />
+            <TableColumn fx:id="ProjectTableColumn" prefWidth="150" text="Project" />
+            <TableColumn fx:id="StatusTableColumn" prefWidth="100" text="Status" />
+        </columns>
+    </TableView>
+
+    <Button layoutX="20" layoutY="580" onAction="#BackOnActionButton" prefWidth="80" text="Back" />
+   <Label fx:id="StatusLabel" layoutX="397.0" layoutY="210.0" prefHeight="25.0" prefWidth="114.0" text="what is the Status?  " />
 
 </AnchorPane>

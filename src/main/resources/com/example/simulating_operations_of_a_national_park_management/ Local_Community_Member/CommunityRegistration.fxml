@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="612.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_a_national_park_management.Local_Community_Member.CommunityRegistrationController">
+
+    <Label layoutX="20.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Community Registration" />
+
+    <VBox layoutX="14.0" layoutY="70.0" prefHeight="490.0" prefWidth="490.0" spacing="15.0">
+        <Label style="-fx-font-size: 16px;" text="Register as Community Participant" />
+
+        <VBox spacing="10.0">
+            <Label text="Name" />
+            <TextField fx:id="nameTextField" prefWidth="300.0" />
+
+            <Label text="Address" />
+            <TextField fx:id="addressTextField" prefWidth="300.0" />
+
+            <Label text="Phone" />
+            <TextField fx:id="phoneTextField" prefWidth="300.0" />
+
+            <Label text="Email" />
+            <TextField fx:id="emailTextField" prefWidth="300.0" />
+
+            <Label text="Community Role" />
+            <ComboBox fx:id="CommunityroleComboBox" prefWidth="300.0" />
+
+            <Label text="Password" />
+            <PasswordField fx:id="passwordField" prefWidth="300.0" />
+
+            <Label text="Confirm Password" />
+            <PasswordField fx:id="confirmPasswordField" prefHeight="33.0" prefWidth="490.0" />
+        </VBox>
+
+        <!-- Buttons inside the main VBox -->
+        <HBox spacing="10.0">
+            <Button onAction="#registerButton" prefHeight="40.0" prefWidth="100.0" text="Register" />
+
+            <Button onAction="#cancelButton" prefHeight="40.0" prefWidth="100.0" text="Cancel" />
+
+            <Button onAction="#BackToDashboardOnActionButton" prefHeight="40.0" prefWidth="150.0" text="Back to Dashboard" />
+        </HBox>
+
+    </VBox>
 
 </AnchorPane>

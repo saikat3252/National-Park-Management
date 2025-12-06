@@ -6,15 +6,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_a_national_park_management.Maintenance_Staff.RequestMaterialController">
    <children>
       <Label layoutX="213.0" layoutY="22.0" text="Request Materials" />
       <Label layoutX="26.0" layoutY="94.0" text="Material Name" />
-      <TextField layoutX="128.0" layoutY="90.0" />
+      <TextField fx:id="MaterialNameTextField" layoutX="128.0" layoutY="90.0" />
       <Label layoutX="26.0" layoutY="165.0" text="Quantity" />
-      <TextField layoutX="84.0" layoutY="161.0" />
+      <TextField fx:id="QuantityTextField" layoutX="84.0" layoutY="161.0" />
       <Label layoutX="26.0" layoutY="231.0" text="Reason" />
-      <Button layoutX="401.0" layoutY="111.0" mnemonicParsing="false" text="Submit Request" />
-      <TextArea layoutX="77.0" layoutY="231.0" prefHeight="88.0" prefWidth="200.0" />
+      <Button layoutX="401.0" layoutY="111.0" mnemonicParsing="false" onAction="#SubmitOnActionButton" text="Submit Request" />
+      <TextArea fx:id="ReasonTextArea" layoutX="77.0" layoutY="231.0" prefHeight="88.0" prefWidth="200.0" />
+      <Button layoutX="453.0" layoutY="347.0" mnemonicParsing="false" onAction="#BackOnActionButton" text="Back" />
    </children>
 </AnchorPane>

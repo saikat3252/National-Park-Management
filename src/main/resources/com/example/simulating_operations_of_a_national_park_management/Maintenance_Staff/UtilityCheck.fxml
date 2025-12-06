@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controllers.UtilityCheckController"
-      alignment="CENTER" spacing="15"
-      prefWidth="600" prefHeight="450"
-      style="-fx-background-color: #f0f4f8;">
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label text="Utility Check"
-           style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
-
-    <Label text="Select utility to check:" style="-fx-font-size: 16px;"/>
-
-    <ChoiceBox fx:id="utilityType">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Electricity"/>
-                <String fx:value="Water Supply"/>
-                <String fx:value="Internet"/>
-                <String fx:value="CCTV Surveillance"/>
-                <String fx:value="Park Gate Security System"/>
-            </FXCollections>
-        </items>
-    </ChoiceBox>
-
-    <Button text="Run Check" fx:id="btnRunCheck" prefWidth="200" prefHeight="35"/>
-
-    <TextArea fx:id="outputArea" prefHeight="180" prefWidth="450"/>
-
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulating_operations_of_a_national_park_management.Maintenance_Staff.UtilityCheckController">
+   <children>
+      <Label layoutX="168.0" layoutY="24.0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Utility Check" />
+      <Label layoutX="30.0" layoutY="88.0" style="-fx-font-size: 16px;" text="Select utility to check:" />
+      <Button layoutX="223.0" layoutY="254.0" onAction="#RunCheckButton" prefHeight="35" prefWidth="200" text="Run Check" />
+      <TextArea fx:id="outputTextArea" layoutX="183.0" layoutY="134.0" prefHeight="111.0" prefWidth="240.0" />
+      <Label layoutX="67.0" layoutY="149.0" style="-fx-font-size: 16px;" text="OutPut show" />
+      <ComboBox fx:id="utilityTypeComboBox" layoutX="209.0" layoutY="88.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

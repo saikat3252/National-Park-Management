@@ -1,4 +1,0 @@
-package com.example.simulating_operations_of_a_national_park_management.Maintenance_Staff;
-
-public class MaintenanceDashBoardController {
-}
